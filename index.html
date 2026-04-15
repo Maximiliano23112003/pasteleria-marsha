@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARSHA Banquetería | Villa Almendral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a id="whatsapp-float" class="whatsapp-float" href="https://wa.me/56964044114" target="_blank" rel="noreferrer">
+    <span>WhatsApp</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.89 11.89 0 0012 0C5.37 0 0 5.37 0 12a11.87 11.87 0 001.65 6.06L0 24l5.97-1.56A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.24-6.19-3.48-8.52zM12 21.6a9.59 9.59 0 01-4.88-1.37l-.35-.2-3.55.93.94-3.47-.23-.36A9.58 9.58 0 012.4 12c0-5.31 4.29-9.6 9.6-9.6s9.6 4.29 9.6 9.6-4.29 9.6-9.6 9.6zm5.31-7.84c-.23-.12-1.38-.68-1.6-.76-.22-.08-.38-.12-.53.12s-.61.76-.75.92-.28.18-.52.06a9.4 9.4 0 01-2.76-1.7 10.02 10.02 0 01-1.86-2.31c-.19-.32 0-.49.14-.61.15-.12.34-.28.51-.42.17-.14.22-.24.33-.4.11-.16.06-.3 0-.42-.06-.12-.53-1.28-.73-1.76-.19-.46-.39-.4-.53-.41h-.45a1.83 1.83 0 00-.67.16 1.45 1.45 0 00-.53.53c-.18.22-.7.69-.7 1.69s.72 1.96.82 2.1c.1.14 1.42 2.32 3.45 3.25 2.42 1.13 2.42.75 2.86.7.44-.06 1.38-.56 1.58-1.1.18-.5.18-.93.12-1.03-.06-.1-.22-.15-.45-.27z"></path></svg>
+  </a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>MARSHA</h1>
+        <p class="brand-subtitle">Villa Almendral, Coltauco</p>
+      </div>
+      <nav class="nav-links">
+        <a href="#productos">Productos</a>
+        <a href="#cotizador">Cotizador</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="button button-primary header-button" href="#cotizador">Cotizar</a>
+      <button class="hamburger" aria-label="Menú móvil">☰</button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <a href="#productos">Productos</a>
+    <a href="#cotizador">Cotizar</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+    <a class="button button-primary" href="#cotizador">Cotizar</a>
+  </nav>
+
+  <main>
+    <section class="hero-section section-animate">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h2>Endulza tus eventos con MARSHA</h2>
+          <p>Productos dulces y salados premium para cumpleaños, matrimonios y celebraciones. Cotización profesional y entrega puntual.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#productos">Ver Productos</a>
+            <a class="button button-secondary" href="#cotizador">Cotizar Ahora</a>
+          </div>
+          <div class="hero-pill-grid">
+            <div class="hero-pill">Entregas puntuales y cuidadas</div>
+            <div class="hero-pill">Cotizaciones formales por WhatsApp</div>
+            <div class="hero-pill">Atención personalizada para cada evento</div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="imagen-11.jpeg" alt="Postres premium" />
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="products-section section-animate">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nuestros Productos</h2>
+          <p>Selecciona los productos para tu evento y arma tu cotización personalizada.</p>
+        </div>
+        <div class="products-grid" id="products"></div>
+      </div>
+    </section>
+
+    <section id="cotizador" class="quote-section section-animate">
+      <div class="container">
+        <div class="section-header">
+          <h2>Cotizador Profesional</h2>
+          <p>Completa los detalles de tu evento para recibir una cotización formal.</p>
+        </div>
+        <div class="quote-layout">
+          <div class="cart-panel">
+            <h3>Resumen de Pedido</h3>
+            <div class="cart-list" id="cart-list">
+              <p class="empty-cart">No hay productos seleccionados.</p>
+            </div>
+            <div class="cart-total">
+              <span>Total Estimado:</span>
+              <strong id="cart-total">$0</strong>
+            </div>
+            <button id="reset-cart" class="button button-secondary">Limpiar</button>
+          </div>
+          <div class="form-panel">
+            <h3>Datos del Evento</h3>
+            <form class="quote-form">
+              <label>
+                Nombre
+                <input type="text" id="client-name" placeholder="Tu nombre" required />
+              </label>
+              <label>
+                Fecha del Evento
+                <input type="date" id="event-date" required />
+              </label>
+              <label>
+                Observaciones
+                <textarea id="extra-notes" placeholder="Detalles adicionales"></textarea>
+              </label>
+              <button id="send-whatsapp" type="button" class="button button-primary">Enviar por WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="gallery-section section-animate">
+      <div class="container">
+        <div class="section-header">
+          <h2>Galería de Trabajos</h2>
+          <p>Presentaciones premium para tus celebraciones.</p>
+        </div>
+        <div class="gallery-grid">
+          <img src="img-04.jpeg" alt="Postres" />
+          <img src="img-06.jpeg" alt="Picoteo" />
+          <img src="img-07.jpeg" alt="Tabla dulce" />
+          <img src="img-12.jpg" alt="Gomitas" />
+          <img src="img-08.jpeg" alt="Tapaditos" />
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section section-animate">
+      <div class="container">
+        <div class="section-header">
+          <h2>Testimonios</h2>
+          <p>Lo que dicen nuestros clientes.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <p>"Productos frescos y deliciosos. Excelente atención."</p>
+            <cite>Carla G.</cite>
+          </div>
+          <div class="testimonial">
+            <p>"Ideal para eventos. Muy profesionales."</p>
+            <cite>Sebastián R.</cite>
+          </div>
+          <div class="testimonial">
+            <p>"Recomendado al 100%. Servicio excelente."</p>
+            <cite>María F.</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section section-animate">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contacto</h2>
+          <p>Visítanos o contáctanos para más información.</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <p><strong>Dirección:</strong> Villa Almendral, Pasaje Los Crisantemos 427, Coltauco</p>
+            <p><strong>Horario:</strong> Lunes a sábado, 09:00 - 19:00</p>
+            <p><strong>Teléfono:</strong> +56 9 6404 4114</p>
+            <p class="contact-note">Solicita tu presupuesto formal por WhatsApp y te enviamos el detalle completo de tu pedido.</p>
+            <div class="contact-actions">
+              <a class="button button-secondary" href="#cotizador">Cotizar</a>
+              <a id="contact-whatsapp" class="button button-primary" href="https://wa.me/56964044114" target="_blank" rel="noreferrer">WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact-benefits contact-card">
+            <h3>Atención premium</h3>
+            <p>Reserve con tiempo y aproveche descuentos para eventos grandes.</p>
+            <ul>
+              <li>Descuento por volumen</li>
+              <li>Combo para eventos</li>
+              <li>Atención personalizada</li>
+              <li>Entrega segura y cuidada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 MARSHA Banquetería. Villa Almendral, Coltauco.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
